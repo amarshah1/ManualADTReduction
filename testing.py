@@ -17,8 +17,8 @@ query_list = [query1, query2]
 
 #1. Testing axiom 1, i.e. that every term satisfies exactly one tester
 
-cons_query = ("not", ("function", "is_Cons", "x"))
-nil_query = ("not", ("function", "is_Nil", "x"), [])
+cons_query = ("not", ("function", "is-Cons", "x"))
+nil_query = ("not", ("function", "is-Nil", "x"), [])
 ax1_query = [cons_query, nil_query]
 
 axiom1_query, ax1variables = reduction_with_axioms(ax1_query, {"x": "MyList"})
@@ -31,7 +31,7 @@ axiom1_query, ax1variables = reduction_with_axioms(ax1_query, {"x": "MyList"})
 
 constr_query = ("equality", "x", ("function", "Cons", ["y", "z"]))
 const2_query = ("equality", "z", ("function", "Nil", []))
-tester_query = ("function", "is_Cons", "z")
+tester_query = ("function", "is-Cons", "z")
 ax2_query = [constr_query, const2_query, tester_query]
 
 axiom2_query, ax2variables = reduction_with_axioms(ax2_query, {"x": "MyList", "y": "Int", "z": "MyList"})

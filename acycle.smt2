@@ -1,18 +1,18 @@
 (set-logic ALL) 
 
-(declare-sort MyList 0) 
+    (declare-sort MyList 0) 
 
-(declare-fun Nil () MyList) 
+    (declare-fun Nil () MyList) 
 
-(declare-fun Cons (Int MyList) MyList) 
+    (declare-fun Cons (Int MyList) MyList) 
 
-(declare-fun Head (MyList) Int) 
+    (declare-fun Head (MyList) Int) 
 
-(declare-fun Tail (MyList) MyList) 
+    (declare-fun Tail (MyList) MyList) 
 
-(declare-fun is_Nil (MyList) Bool) 
+    (declare-fun is_Nil (MyList) Bool) 
 
-(declare-fun is_Cons (MyList) Bool) 
+    (declare-fun is_Cons (MyList) Bool) 
 (declare-fun x () MyList) 
 (declare-fun y () MyList) 
 (declare-fun z () MyList) 
@@ -44,3 +44,25 @@
 (assert (or (not (is_Cons z)) (not (is_Nil z))) )
 (assert (and (= cv12 (Tail z)) (not (= cv12 z)) (= cv13 (Tail cv12)) (not (= cv13 z)) (not (= cv13 z)) (= cv14 (Tail cv13)) (not (= cv14 z)) (not (= cv14 z)) (not (= cv14 cv12))) )
 (check-sat)
+
+('and', ('and', [('and', [('function', 'is_Cons', [('function', 'Nil', [])]), ('equality', [('function', 'Nil', [])],
+ ('function', 'Cons', ['cv0', 'cv1'])), ('equality', 'cv0', ('function', 'Head', [[('function', 'Nil', [])]])),
+ ('equality', 'cv1', ('function', 'Tail', [[('function', 'Nil', [])]]))], []), ('and', [('equality', 'l6', ('function', 'Nil', [])),
+  ('function', 'is_Nil', 'l6')], []), ('and', ('or', [('and', [('equality', 'l5', ('function', 'Nil', [])), 
+  ('function', 'is_Nil', 'l5')], []), ('and', [('equality', 'l3', ('function', 'Nil', [])), ('function', 'is_Nil', 'l3')],
+   [])], []), [])], []), [])
+
+
+[('equality', 'l9', ('function', 'Nil', [])), ('function', 'is_Nil', 'l9')]
+('and', [('and', [('function', 'is_Nil', ['l0']), ('equality', ['l0'], ('function', 'Nil', []))], []),
+ ('and', [('equality', 'l9', ('function', 'Nil', [])), ('function', 'is_Nil', 'l9')], [])], [])
+
+
+   [('function', 'is_Cons', [('function', 'Nil', [])]), ('equality', [('function', 'Nil', [])], 
+   ('function', 'Cons', ['cv68', 'cv69'])), ('equality', 'cv68', ('function', 'Head', [[('function', 'Nil', [])]])),
+    ('equality', 'cv69', ('function', 'Tail', [[('function', 'Nil', [])]]))]
+
+    ('and', ('or', [('and', [('equality', 'l1', 'l3')], []), ('and', [('function', 'is_Cons', ['l5']), ('equality', ['l5'],
+     ('function', 'Cons', ['cv0', 'cv1'])), ('equality', 'cv0', ('function', 'Head', [['l5']])), 
+     ('equality', 'cv1', ('function', 'Tail', [['l5']]))], []), ('and', [('function', 'is_Nil', ['l8']), ('equality', ['l8'],
+      ('function', 'Nil', []))], [])], []), [])
