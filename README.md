@@ -3,3 +3,5 @@
 A python script that converts ADT list SMT queries in Negative Normal Form(NNF) to EUF SMT queries. The queries are represented using Python tuples, but there is a helper function to parse these tuples and turn them into SMT2 queries.
 
 This reduction can be generalized to all possible ADT queries not necessarily in NNF form
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDVNti7OQSpHGLgxxGI5+bDXrOrdnqBVuAt6uexYQqsPaJAPIPSFKIhlPI94IM6tGeY6jd9S2EGn5mFdliF6TFxAk+CZx8lDuwjqJrnelBoRAyiJc2Vaf10t9iJaJkEDe++Pwhx28uw2xnkCkHBZ7YJK1SMkdDqhOB/9ooaiYlCZw7+rc7oE57wPP2fswABmziLshX1hZpIRX5B7KU6HagIniAy086l1MrssN4mwgGM8ObTvI2w1K9FQz8KW0j3UwB2KpMGsnAIgXQ2wU6Xh9RVEtsjcr1VGvvo4C4i41cFGxU9GO237gX9/wYPPRcMOEp2u3LHSubaymXxKe0Zt+FL13Qjth3wO6yV8Bcsg2pO1diKbWmav7ODZCMV39ATZcxmnaM3WTRSEBkTM6Y+631MmXmUTBuhAUoyL2hEzaA6AHt6hGfUlyiMjS+xgDrcAGnX9ItThArL0ujOTyt1/W60F4kTzKv5Zzbr4P1OB5cQAtk7/tFYI60TK7CcGIk4HIs= amarshah@Amars-MacBook-Air.local
